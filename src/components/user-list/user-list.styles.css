@@ -1,0 +1,30 @@
+.user-list {
+  background-color: #fff;
+  width: 80%;
+  margin: 0.6rem auto;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  list-style-type: none;
+}
+
+.user-list:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.users-title {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.no-users {
+  background-color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}

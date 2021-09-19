@@ -1,0 +1,16 @@
+.user-item {
+  list-style-type: none;
+}
+
+.user-item:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.user-item p {
+  font-size: 0.8rem;
+}
+
+.user-item p span {
+  font-style: bold;
+  font-size: 1.2rem;
+}
