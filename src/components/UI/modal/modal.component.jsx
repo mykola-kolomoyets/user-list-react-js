@@ -1,10 +1,12 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import { Button } from "./../button";
 
 import "./modal.styles.css";
 
-const Modal = (props) => {
+const Overlay = (props) => {
   const { title, content, success, visible, onClick } = props;
+
   return (
     <div className={`wrapper ${visible ? "visible" : "hidden"}`}>
       <div className={`modal ${success ? "success" : "error"}`}>
@@ -19,6 +21,17 @@ const Modal = (props) => {
         </footer>
       </div>
     </div>
+  );
+};
+
+const Modal = (props) => {
+  return (
+    <>
+      {ReactDOM.createPortal(
+        <Overlay {...props} />,
+        document.getElementById("overlay")
+      )}
+    </>
   );
 };
 
