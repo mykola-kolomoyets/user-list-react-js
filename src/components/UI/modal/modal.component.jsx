@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createPortal } from "react-dom";
 import { Button } from "./../button";
 
 import "./modal.styles.css";
@@ -27,10 +27,7 @@ const Overlay = (props) => {
 const Modal = (props) => {
   return (
     <>
-      {ReactDOM.createPortal(
-        <Overlay {...props} />,
-        document.getElementById("overlay")
-      )}
+      {createPortal(<Overlay {...props} />, document.getElementById("overlay"))}
     </>
   );
 };
