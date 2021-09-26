@@ -34,6 +34,8 @@ const UserForm = (props) => {
     props.onSubmit({ username, age });
     // setUsername("");
     // setAge("");
+    usernameRef.current.value = "";
+    ageRef.current.value = "";
   };
 
   return (
